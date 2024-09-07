@@ -1,0 +1,178 @@
+/* Estilo para el contenedor del modal */
+.modal-dialog {
+    display: flex;
+    justify-content: center; /* Centra el modal horizontalmente */
+    align-items: center; /* Centra el modal verticalmente */
+    margin: 1.75rem auto; /* Elimina el margen por defecto */
+    height: auto; /* Asegura que el modal esté centrado verticalmente */
+}
+
+/* Ajuste del contenido del modal */
+.modal-content {
+    box-sizing: border-box; /* Incluye padding y border en el ancho total */
+    margin: 0; /* Elimina el margen por defecto del contenido */
+    padding: 0; /* Padding interno del contenido del modal */
+    border-radius: 0.5rem; /* Bordes redondeados opcionales */
+    background-color: #fff; /* Fondo blanco opcional */
+}
+
+/* Estilo para el encabezado del modal */
+.modal-header {
+    background-color: #003366; /* Azul oscuro */
+    color: white; /* Texto blanco */
+    font-weight: bold; /* Texto en negrita */
+    padding: 15px 20px; /* Padding interno del encabezado */
+    box-sizing: border-box; /* Incluye padding en el ancho total */
+}
+
+/* Estilo para el título del modal en el encabezado */
+.modal-header .modal-title {
+    margin: 0; /* Elimina el margen por defecto del h5 */
+    font-size: 1.25rem; /* Tamaño de fuente ajustado */
+}
+
+/* Estilo para el botón de cerrar el modal en el encabezado */
+.modal-header .btn-close {
+    filter: invert(1); /* Invertir el color del icono para hacerlo blanco */
+}
+
+#formTerceros {
+    padding-left: 30px; /* Ajusta el padding a la izquierda */
+    padding-right: 30px; /* Ajusta el padding a la derecha */
+}
+
+/* Estilo para el pie del modal */
+.modal-footer {
+    padding: 10px 20px; /* Padding interno del pie del modal */
+    border-top: 1px solid #dee2e6; /* Borde superior para separación */
+}
+
+/* Evitar el scroll del fondo cuando el modal está abierto */
+body.modal-open {
+    overflow: hidden; /* Elimina el scroll de la página principal */
+}
+
+/* Estilo para los botones de navegación con fondo transparente */
+.btn-transparent {
+    font-size: 1.25rem; /* Reducir el tamaño de fuente */
+    border: none;
+    background: none;
+    color: #007bff;
+    cursor: pointer;
+    transition: color 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 2rem; /* Reducir el ancho */
+    height: 2rem; /* Reducir la altura */
+}
+
+.btn-transparent:hover {
+    color: #0056b3;
+}
+
+/* Ajustar la sección del formulario */
+.form-section {
+    display: none;
+}
+
+.form-section.active {
+    display: block;
+}
+
+/* Estilo para los puntos de paginación */
+.pagination-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem; /* Reducir el espacio entre los botones y los puntos */
+}
+
+/* Estilo para los puntos de paginación */
+.pagination-dots {
+    display: flex;
+    gap: 0.25rem; /* Reducir el espacio entre los puntos */
+}
+
+/* Estilo para los puntos de paginación */
+.dot {
+    width: 8px; /* Reducir el ancho del punto */
+    height: 8px; /* Reducir la altura del punto */
+    border-radius: 50%;
+    background-color: #e0e0e0;
+}
+
+.dot.active {
+    background-color: #007bff;
+}
+
+/* Estilos para los formularios en el modal */
+#formContainer .form-section {
+    display: none;
+}
+
+#formContainer .form-section.active {
+    display: block;
+}
+
+/* Contenedor de las filas del formulario con flexbox */
+.row.mb-3 {
+    display: flex;
+    align-items: center; /* Alinea los elementos verticalmente en el centro */
+    margin-bottom: 0.5rem; /* Reducir el margen inferior entre las filas */
+}
+
+/* Estilo para las etiquetas de formulario en todas las columnas */
+.form-label {
+    display: block;
+    width: 80px; /* Ancho fijo para los labels en todas las columnas */
+    text-align: left;
+    margin-bottom: 0; /* Reducir el margen inferior */
+    margin-right: 0; /* Sin espacio entre el label y el campo de entrada */
+    font-weight: bold; /* Texto en negrita */
+    font-size: 0.80rem; /* Tamaño de fuente más pequeño y legible */
+}
+
+/* Alineación y tamaño de los campos de entrada y selección en todas las columnas */
+.form-control,
+.form-select {
+    flex: 1; /* Ocupa el espacio restante en el contenedor flex */
+    height: calc(1.5em + .5rem + 2px); /* Ajusta la altura del campo para que sea más compacto */
+    padding: .25rem .5rem; /* Ajusta el padding para el tamaño del campo */
+    font-size: 0.875rem; /* Reducir el tamaño de la fuente */
+    margin-left: 0px; /* Margen izquierdo */
+    margin-right: 8px; /* Margen derecho */
+}
+
+/* Ajuste para las columnas md-3, md-6 y md-12 */
+.col-md-3 .form-control,
+.col-md-3 .form-select,
+.col-md-6 .form-control,
+.col-md-6 .form-select,
+.col-md-12 .form-control,
+.col-md-12 .form-select {
+    width: calc(100% - 88px); /* Ajusta el ancho considerando el ancho del label (80px) y márgenes (8px) */
+    box-sizing: border-box; /* Incluye padding y border en el ancho total */
+}
+
+/* Ajuste adicional para eliminar espacio extra */
+.input-group {
+    margin-bottom: 0.5rem; /* Reducir el margen inferior de los grupos de entrada */
+}
+
+/* Estilo para las columnas dentro de las filas */
+.col-md-12,
+.col-md-6,
+.col-md-3 {
+    padding-left: 0; /* Elimina el padding izquierdo de las columnas */
+    padding-right: 0; /* Elimina el padding derecho de las columnas */
+}
+
+/* Estilo para el título de las subsecciones */
+.subseccion-titulo {
+    background-color: #003366; /* Azul oscuro */
+    color: white; /* Texto blanco */
+    font-weight: bold; /* Texto en negrita */
+    padding: 0.5rem; /* Padding interno */
+    margin-bottom: 1rem; /* Espacio debajo del título */
+}

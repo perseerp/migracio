@@ -1,0 +1,57 @@
+/* public/css/header.css */
+.navbar-custom {
+    background-color: #003366; /* Azul oscuro industrial */
+    padding: 10px 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000; /* Asegura que el menú esté encima del contenido */
+    box-shadow: 0 4px 2px -2px gray; /* Sombra opcional para el menú */
+}
+.navbar-custom .nav-link {
+    color: #fff;
+}
+.navbar-custom .nav-link:hover {
+    background-color: #00509e; /* Color más claro al pasar el cursor */
+    text-decoration: none;
+}
+.navbar-custom .nav-link.active {
+    background-color: #00509e;
+}
+.submenu {
+    padding-left: 0;
+}
+.submenu .nav-link {
+    padding: 10px 15px;
+    color: #000; /* Texto negro en el submenú */
+}
+.submenu .nav-link:hover {
+    background-color: #f1f1f1; /* Color más claro al pasar el cursor en el submenú */
+    color: #000; /* Texto negro al pasar el cursor */
+}
+footer {
+    padding: 5px 10px; /* Reduce el padding general */
+    background-color: #003366; /* Azul oscuro para el footer */
+    color: #fff; /* Letras blancas */
+    font-size: 0.8rem; /* Tamaño de fuente más pequeño */
+    line-height: 0.7; /* Reduce el espacio entre líneas */
+    text-align: center; /* Centra el texto del footer */
+}
+.user-menu .dropdown-toggle {
+    display: flex;
+    align-items: center;
+}
+.user-menu .dropdown-toggle img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+.user-menu .dropdown-menu {
+    display: none; /* Oculta el menú por defecto */
+    flex-direction: column;
+}
+.user-menu .dropdown-menu.show {
+    display: flex; /* Muestra el menú cuando tiene la clase 'show' */
+}

@@ -1,0 +1,133 @@
+/* Estilo general para la página */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+    margin: 0;
+    padding: 0;
+}
+
+/* Ajuste del margen superior para el contenedor */
+.container.content {
+    margin-top: 80px; /* Ajusta según la altura de tu header */
+}
+
+/* Estilo para la barra de búsqueda */
+.search-bar {
+    margin-bottom: 20px;
+}
+
+.search-bar form {
+    display: flex;
+    gap: 15px; /* Aumenta el espacio entre el campo de búsqueda y el botón */
+    align-items: center; /* Alinea verticalmente el campo de búsqueda y el botón */
+}
+
+.search-bar .form-control {
+    flex: 1; /* Hace que el campo de búsqueda ocupe el espacio disponible */
+    border-radius: 0.375rem;
+    height: 2.5rem; /* Establece una altura fija para el campo de búsqueda */
+    padding: 0.5rem; /* Aumenta el padding interno */
+    font-size: 1rem; /* Aumenta el tamaño de la fuente */
+}
+
+.search-bar .btn-outline-primary {
+    border-radius: 0.375rem;
+    padding: 0.5rem 1rem; /* Aumenta el padding del botón */
+    font-size: 1rem; /* Aumenta el tamaño de la fuente del botón */
+}
+
+/* Estilo para la tabla */
+.table-container {
+    margin-top: 20px;
+}
+
+.table {
+    width: 100%;
+    margin-bottom: 1rem;
+    color: #212529;
+}
+
+.table-hover tbody tr:hover {
+    background-color: #f1f1f1;
+}
+
+.table th, .table td {
+    vertical-align: middle;
+    padding: 0.75rem;
+}
+
+.table th {
+    background-color: #003366; /* Azul oscuro */
+    color: #FFFFFF; /* Color blanco para el texto */
+    font-weight: 600;
+}
+
+.table-striped tbody tr:nth-of-type(odd) {
+    background-color: #f8f9fa;
+}
+
+/* Estilo para los botones */
+.btn {
+    border-radius: 0.375rem;
+}
+
+/* Estilo para el botón de "Crear Nueva Factura" */
+.text-end .btn-primary {
+    border-radius: 0.375rem;
+    background-color: #6D1F1F; /* Vinotinto */
+    border-color: #6D1F1F;
+}
+
+.btn-primary:hover {
+    background-color: #4A1414; /* Un tono más oscuro para el hover */
+    border-color: #4A1414;
+}
+
+/* Responsividad */
+@media (max-width: 576px) {
+    .search-bar {
+        text-align: center;
+    }
+    
+    .search-bar form {
+        flex-direction: column;
+    }
+    
+    .search-bar .form-control, .search-bar .form-select {
+        flex: 1; /* Hace que el campo de búsqueda ocupe el espacio disponible */
+        border-radius: 0.375rem;
+        height: 2.5rem; /* Establece una altura fija para el campo de búsqueda */
+        padding: 0.5rem; /* Aumenta el padding interno */
+        font-size: 1rem;
+    }
+    
+    .text-end {
+        text-align: center;
+    }
+    
+    .text-end .btn-primary {
+        width: 100%;
+    }
+    
+    /* Estilo para la tabla en pantallas pequeñas */
+    .table-container {
+        overflow-x: auto; /* Permite el desplazamiento horizontal en pantallas pequeñas */
+    }
+
+    .table {
+        display: block; /* Hace que la tabla sea un bloque para que el overflow funcione */
+        white-space: nowrap; /* Evita el ajuste de texto dentro de las celdas */
+    }
+}
+
+@media (min-width: 576px) and (max-width: 768px) {
+    .table td, .table th {
+        font-size: 0.875rem;
+    }
+}
+
+@media (min-width: 992px) {
+    .table td, .table th {
+        font-size: 1rem;
+    }
+}

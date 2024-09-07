@@ -1,0 +1,578 @@
+<!-- Modal Terceros -->
+<div class="modal fade" id="modalTerceros" tabindex="-1" aria-labelledby="modalTercerosLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="modalTercerosLabel">Formulario Terceros</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div id="formContainer">
+                    <!-- Primer Sección -->
+                    <div class="form-section active">
+                        <form id="formTerceros">
+                            <!-- Fila 1 -->
+                            <div class="mb-3">
+                                <div class="row mb-3">
+                                    <div class="col-md-12 d-flex justify-content-end">
+                                        <div class="d-flex align-items-center">
+                                            <label for="estado" class="form-label text-danger mb-0">Estado</label>
+                                            <input type="text" class="form-control ms-2" id="estado" readonly style="background-color: #f8d7da; width: 80px;" maxlength="1">
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Fila 2 -->
+                                <div class="row mb-3">
+                                    <div class="col-md-6">
+                                        <div class="d-flex align-items-center">
+                                            <label for="status" class="form-label text-danger mb-0">Status</label>
+                                            <select class="form-select ms-2" id="status">
+                                                <option value=""></option>
+                                                <option value="ACTIVADO">ACTIVADO</option>
+                                                <option value="DESACTIVADO">DESACTIVADO</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="d-flex align-items-center">
+                                            <label for="canal" class="form-label text-danger mb-0">Canal</label>
+                                            <select class="form-select ms-2" id="canal">
+                                                <!-- Opciones -->
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Fila 3 -->
+                                <div class="row mb-3">
+                                    <div class="col-md-6">
+                                        <div class="d-flex align-items-center">
+                                            <label for="tipoTercero" class="form-label text-danger mb-0">Tipo Tercero</label>
+                                            <select class="form-select ms-2" id="tipoTercero">
+                                                <!-- Opciones -->
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="d-flex align-items-center">
+                                            <label for="codigo" class="form-label text-danger mb-0">Código</label>
+                                            <input type="text" class="form-control ms-2" id="codigo" style="width: 100%;">
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Fila 4 -->
+                                <div class="row mb-3">
+                                    <div class="col-md-6">
+                                        <div class="d-flex align-items-center">
+                                            <label for="claseIdentificacion" class="form-label text-danger mb-0">* Clase Identificación</label>
+                                            <select class="form-select ms-2" id="claseIdentificacion">
+                                                <!-- Opciones -->
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="d-flex align-items-center">
+                                            <label for="respFiscal" class="form-label text-danger mb-0">* Resp. Fiscal</label>
+                                            <select class="form-select ms-2" id="respFiscal">
+                                                <!-- Opciones -->
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Fila 5 -->
+                                <div class="row mb-3">
+                                    <div class="col-md-6">
+                                        <div class="d-flex align-items-center">
+                                            <label for="noIdentificacion" class="form-label text-danger mb-0">* No. Identificación</label>
+                                            <input type="text" class="form-control ms-2" id="noIdentificacion" style="width: 100%;">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="d-flex align-items-center">
+                                            <label for="expedidaEn" class="form-label text-danger mb-0">Expedida en</label>
+                                            <input type="text" class="form-control ms-2" id="expedidaEn" style="width: 100%;">
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Fila 6 -->
+                                <div class="row mb-3">
+                                    <div class="col-md-6">
+                                        <div class="d-flex align-items-center">
+                                            <label for="tipoPersona" class="form-label text-danger mb-0">* Tipo Persona</label>
+                                            <select class="form-select ms-2" id="tipoPersona">
+                                                <!-- Opciones -->
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="d-flex align-items-center">
+                                            <label for="regimenIVA" class="form-label text-danger mb-0">* Régimen IVA</label>
+                                            <select class="form-select ms-2" id="regimenIVA">
+                                                <!-- Opciones -->
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <!-- Segunda Sección -->
+                    <div class="form-section">
+                        <form id="formTerceros">
+                            <!-- Fila 1 -->
+                            <div class="row mb-3">
+                                <div class="col-md-3">
+                                    <div class="d-flex align-items-center">
+                                        <label for="primerApellido" class="form-label text-danger mb-0">1° Apellido</label>
+                                        <input type="text" class="form-control ms-2" id="primerApellido">
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="d-flex align-items-center">
+                                        <label for="segundoApellido" class="form-label text-danger mb-0">2° Apellido</label>
+                                        <input type="text" class="form-control ms-2" id="segundoApellido">
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="d-flex align-items-center">
+                                        <label for="primerNombre" class="form-label text-danger mb-0">1° Nombre</label>
+                                        <input type="text" class="form-control ms-2" id="primerNombre">
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="d-flex align-items-center">
+                                        <label for="segundoNombre" class="form-label text-danger mb-0">2° Nombre</label>
+                                        <input type="text" class="form-control ms-2" id="segundoNombre">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Fila 2 -->
+                            <div class="row mb-3">
+                                <div class="col-md-12">
+                                    <div class="d-flex align-items-center">
+                                        <label for="razonSocial" class="form-label text-danger mb-0">Razón Social</label>
+                                        <input type="text" class="form-control ms-2" id="razonSocial" style="width: 100%;">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Fila 3 -->
+                            <div class="row mb-3">
+                                <div class="col-md-12">
+                                    <div class="d-flex align-items-center">
+                                        <label for="tercero" class="form-label text-danger mb-0">* Tercero</label>
+                                        <input type="text" class="form-control ms-2" id="tercero" readonly style="background-color: #f8d7da; width: 100%;">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Fila 4 -->
+                            <div class="row mb-3">
+                                <div class="col-md-6">
+                                    <div class="d-flex align-items-center">
+                                        <label for="direccion" class="form-label text-danger mb-0">* Dirección</label>
+                                        <input type="text" class="form-control ms-2" id="direccion" style="width: 100%;">
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="d-flex align-items-center">
+                                        <label for="telefono" class="form-label text-danger mb-0">* Teléfono</label>
+                                        <input type="text" class="form-control ms-2" id="telefono" style="width: 100%;">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Fila 5 -->
+                            <div class="row mb-3">
+                                <div class="col-md-6">
+                                    <div class="d-flex align-items-center">
+                                        <label for="contacto" class="form-label text-danger mb-0">Contacto</label>
+                                        <input type="text" class="form-control ms-2" id="contacto" style="width: 100%;">
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="d-flex align-items-center">
+                                        <label for="celular" class="form-label text-danger mb-0">Celular</label>
+                                        <input type="text" class="form-control ms-2" id="celular" style="width: 100%;">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Fila 6 -->
+                            <div class="row mb-3">
+                                <div class="col-md-3">
+                                    <div class="d-flex align-items-center">
+                                        <label for="ciudad" class="form-label text-danger mb-0">* Ciudad</label>
+                                        <select class="form-select ms-2" id="ciudad">
+                                            <!-- Opciones -->
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="d-flex align-items-center">
+                                        <label for="pais" class="form-label text-danger mb-0">* País</label>
+                                        <select class="form-select ms-2" id="pais">
+                                            <!-- Opciones -->
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="d-flex align-items-center">
+                                        <label for="codigoPostal" class="form-label text-danger mb-0">* Código Postal</label>
+                                        <select class="form-select ms-2" id="codigoPostal">
+                                            <!-- Opciones -->
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Fila 7 -->
+                            <div class="row mb-3">
+                                <div class="col-md-6">
+                                    <div class="d-flex align-items-center">
+                                        <label for="email" class="form-label text-danger mb-0">* E-mail</label>
+                                        <input type="text" class="form-control ms-2" id="email" style="width: 100%;">
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="d-flex align-items-center">
+                                        <label for="emailFact" class="form-label text-danger mb-0">* E-mail fact. elec.</label>
+                                        <input type="text" class="form-control ms-2" id="emailFact" style="width: 100%;">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Fila 8 -->
+                            <div class="row mb-3">
+                                <div class="col-md-3">
+                                    <div class="d-flex align-items-center">
+                                        <label for="ctaBanco" class="form-label text-danger mb-0">Cta. Banco</label>
+                                        <input type="text" class="form-control ms-2" id="ctaBanco" style="width: 100%;">
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="d-flex align-items-center">
+                                        <label for="banco" class="form-label text-danger mb-0">Banco</label>
+                                        <input type="text" class="form-control ms-2" id="banco" style="width: 100%;">
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="d-flex align-items-center">
+                                        <label for="fechaVinculacion" class="form-label text-danger mb-0">Fecha Vinculación</label>
+                                        <input type="text" class="form-control ms-2" id="fechaVinculacion" style="width: 100%;">
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+
+                    <!-- Tercera Sección -->
+                    <div class="form-section">
+                        <form id="formTerceros">
+                            <!-- Parámetros Comerciales -->
+                            <div class="row mb-3">
+                                <div class="col-md-8">
+                                    <div>
+                                        <!-- Fila 1 -->
+                                        <div class="row mb-3">
+                                            <div class="col-md-12">
+                                                <label class="subseccion-titulo">Parámetros Comerciales:</label>
+                                            </div>
+                                        </div>
+                                        
+                                        <!-- Fila 2 -->
+                                        <div class="row mb-3">
+                                            <div class="col-md-6">
+                                                <div class="d-flex align-items-center">
+                                                    <label for="monedaPago" class="form-label text-danger mb-0">* Moneda de Pago</label>
+                                                    <select class="form-select ms-2" id="monedaPago" style="width: 100%;">
+                                                        <!-- Opciones -->
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="d-flex align-items-center">
+                                                    <label for="zona" class="form-label text-danger mb-0">Zona</label>
+                                                    <select class="form-select ms-2" id="zona" style="width: 100%;">
+                                                        <!-- Opciones -->
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                        <!-- Fila 3 -->
+                                        <div class="row mb-3">
+                                            <div class="col-md-6">
+                                                <div class="d-flex align-items-center">
+                                                    <label for="formaPago" class="form-label text-danger mb-0">* Forma Pago</label>
+                                                    <select class="form-select ms-2" id="formaPago" style="width: 100%;">
+                                                        <!-- Opciones -->
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="d-flex align-items-center">
+                                                    <label for="cupoCredito" class="form-label text-danger mb-0">Cupo Crédito</label>
+                                                    <input type="text" class="form-control ms-2" id="cupoCredito" style="width: 100%;">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                        <!-- Fila 4 -->
+                                        <div class="row mb-3">
+                                            <div class="col-md-6">
+                                                <div class="d-flex align-items-center">
+                                                    <label for="medioPago" class="form-label text-danger mb-0">* Medio Pago</label>
+                                                    <select class="form-select ms-2" id="medioPago" style="width: 100%;">
+                                                        <!-- Opciones -->
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="d-flex align-items-center">
+                                                    <label for="diasAutorizados" class="form-label text-danger mb-0">Días Autorizados</label>
+                                                    <input type="text" class="form-control ms-2" id="diasAutorizados" style="width: 100%;">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                        <!-- Fila 5 -->
+                                        <div class="row mb-3">
+                                            <div class="col-md-6">
+                                                <div class="d-flex align-items-center">
+                                                    <label for="centroCostos" class="form-label text-danger mb-0">Centro Costos</label>
+                                                    <select class="form-select ms-2" id="centroCostos" style="width: 100%;">
+                                                        <!-- Opciones -->
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="d-flex align-items-center">
+                                                    <label for="descuento" class="form-label text-danger mb-0">% Descuento</label>
+                                                    <input type="text" class="form-control ms-2" id="descuento" style="width: 100%;">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                        <!-- Fila 6 -->
+                                        <div class="row mb-3">
+                                            <div class="col-md-6">
+                                                <div class="d-flex align-items-center">
+                                                    <label for="vendedor" class="form-label text-danger mb-0">Vendedor</label>
+                                                    <select class="form-select ms-2" id="vendedor" style="width: 100%;">
+                                                        <!-- Opciones -->
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="d-flex align-items-center">
+                                                    <label for="observaciones" class="form-label text-danger mb-0">Observaciones</label>
+                                                    <textarea class="form-control ms-2" id="observaciones" style="width: 100%; height: 4em;"></textarea>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                        <!-- Fila 7 -->
+                                        <div class="row mb-3">
+                                            <div class="col-md-6">
+                                                <div class="d-flex align-items-center">
+                                                    <label for="diasPago" class="form-label text-danger mb-0">Días Pago</label>
+                                                    <input type="text" class="form-control ms-2" id="diasPago" style="width: 100%;">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <!-- Columna 2: Descuentos Tributarios -->
+                                <div class="col-md-4">
+                                    <div>
+                                        <!-- Fila 1 -->
+                                        <div class="row mb-3">
+                                            <div class="col-md-12">
+                                                <label class="subseccion-titulo">Descuentos Tributarios:</label>
+                                            </div>
+                                        </div>
+                                        
+                                        <!-- Fila 2 -->
+                                        <div class="row mb-3">
+                                            <div class="col-md-12">
+                                                <div class="d-flex align-items-center">
+                                                    <label for="retenciones" class="form-label text-danger mb-0">Retenciones</label>
+                                                    <select class="form-select ms-2" id="retenciones" style="width: 100%;">
+                                                        <!-- Opciones -->
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                        <!-- Fila 3 -->
+                                        <div class="row mb-3">
+                                            <div class="col-md-12">
+                                                <div class="d-flex align-items-center">
+                                                    <label for="reteica" class="form-label text-danger mb-0">ReteICA/1000</label>
+                                                    <input type="text" class="form-control ms-2" id="reteica" style="width: 100%;">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                        <!-- Fila 4 -->
+                                        <div class="row mb-3">
+                                            <div class="col-md-12">
+                                                <div class="d-flex align-items-center">
+                                                    <label for="reteiva" class="form-label text-danger mb-0">% ReteIVA</label>
+                                                    <input type="text" class="form-control ms-2" id="reteiva" style="width: 100%;">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                        <!-- Fila 5 -->
+                                        <div class="row mb-3">
+                                            <div class="col-md-12">
+                                                <div class="d-flex align-items-center">
+                                                    <label for="autoRetencion" class="form-label text-danger mb-0">% AutoRetención</label>
+                                                    <input type="text" class="form-control ms-2" id="autoRetencion" style="width: 100%;">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                        <!-- Fila 6 -->
+                                        <div class="row mb-3">
+                                            <div class="col-md-12">
+                                                <div class="d-flex align-items-center">
+                                                    <label for="avisosTableros" class="form-label text-danger mb-0">Avisos y Tableros</label>
+                                                    <input type="text" class="form-control ms-2" id="avisosTableros" style="width: 100%;">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                        </form>
+                    </div>
+                    
+                    <!-- Cuarta Sección -->
+                    <div class="form-section">
+                        <div style="padding-left: 120px; padding-right: 80px;">
+                            <form id="formTerceros">
+                                <div class="row mb-3">
+                                    <div class="col-md-12">
+                                        <div>
+                                            <!-- Fila 1 -->
+                                            <div class="row mb-3">
+                                                <div class="col-md-12">
+                                                    <label class="subseccion-titulo">Parámetros Contables:</label>
+                                                </div>
+                                            </div>
+                                            
+                                            <!-- Fila 2 -->
+                                            <div class="row mb-3">
+                                                <div class="col-md-12">
+                                                    <div class="d-flex align-items-center">
+                                                        <label for="carteracxc" class="form-label text-danger mb-0">Cartera cxc</label>
+                                                        <select class="form-select ms-2" id="carteracxc1" style="width: 67%;">
+                                                            <!-- Opciones -->
+                                                        </select>
+                                                        <select class="form-select" id="carteracxc2" style="width: 33%;">
+                                                            <!-- Opciones -->
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div> 
+                                            <!-- Fila 3 -->
+                                            <div class="row mb-3">
+                                                <div class="col-md-12">
+                                                    <div class="d-flex align-items-center">
+                                                        <label for="ventasautoretencion" class="form-label text-danger mb-0">Ventas AutoRetención</label>
+                                                        <select class="form-select ms-2" id="ventasautoretencion1" style="width: 67%;">
+                                                            <!-- Opciones -->
+                                                        </select>
+                                                        <select class="form-select" id="ventasautoretencion2" style="width: 33%;">
+                                                            <!-- Opciones -->
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- Fila 4 -->
+                                            <div class="row mb-3">
+                                                <div class="col-md-12">
+                                                    <div class="d-flex align-items-center">
+                                                        <label for="comprascxp" class="form-label text-danger mb-0">Compras cxp</label>
+                                                        <select class="form-select ms-2" id="comprascxp" style="width: 67%;">
+                                                            <!-- Opciones -->
+                                                        </select>
+                                                        <select class="form-select" id="comprascxp" style="width: 33%;">
+                                                            <!-- Opciones -->
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>  
+                                        </div> 
+                                    </div> 
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="pagination-container">
+                <button type="button" class="btn btn-transparent" id="prevSection" aria-label="Anterior"><i class="bi bi-chevron-left"></i></button>
+                <div class="pagination-dots">
+                    <span class="dot active"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                </div>
+                <button type="button" class="btn btn-transparent" id="nextSection" aria-label="Siguiente"><i class="bi bi-chevron-right"></i></button>
+            </div>
+            <div class="modal-footer">
+                <!-- Botón para habilitar la edición -->
+                <button id="editButton" class="btn btn-primary">Editar</button>
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Enlaces a los estilos y scripts necesarios -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.0/font/bootstrap-icons.min.css">
+<link rel="stylesheet" href="stylesheets/modal.css">
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const sections = document.querySelectorAll('.form-section');
+        const dots = document.querySelectorAll('.dot');
+        const prevButton = document.getElementById('prevSection');
+        const nextButton = document.getElementById('nextSection');
+        let currentSection = 0;
+
+        function updateUI() {
+            sections.forEach((section, index) => {
+                section.classList.toggle('active', index === currentSection);
+            });
+            dots.forEach((dot, index) => {
+                dot.classList.toggle('active', index === currentSection);
+            });
+            prevButton.disabled = currentSection === 0;
+            nextButton.disabled = currentSection === sections.length - 1;
+        }
+
+        prevButton.addEventListener('click', () => {
+            if (currentSection > 0) {
+                currentSection--;
+                updateUI();
+            }
+        });
+
+        nextButton.addEventListener('click', () => {
+            if (currentSection < sections.length - 1) {
+                currentSection++;
+                updateUI();
+            }
+        });
+
+        // Inicializa el estado de la UI al cargar el modal
+        updateUI();
+    });
+</script>
+<script src="/js/formHandler.js"></script>

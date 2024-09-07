@@ -1,0 +1,104 @@
+/* General */
+.form-section {
+    margin: 1rem auto; /* Centra el formulario en la página */
+    max-width: 100%; /* Asegura que el formulario use todo el ancho disponible */
+}
+
+/* Encabezado */
+h2.text-center {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+/* Fila y columna */
+.form-row {
+    display: flex;
+    flex-wrap: wrap; /* Permite que los elementos se envuelvan en varias líneas si es necesario */
+    margin-bottom: 1rem;
+}
+
+.col-md-2,
+.col-md-3,
+.col-md-6,
+.col-md-12 {
+    padding: 0.5rem; /* Espaciado interno de las columnas */
+}
+
+.col-md-2 {
+    flex: 0 0 16.6667%;
+    max-width: 16.6667%;
+}
+
+.col-md-3 {
+    flex: 0 0 25%;
+    max-width: 25%;
+}
+
+.col-md-6 {
+    flex: 0 0 50%;
+    max-width: 50%;
+}
+
+.col-md-12 {
+    flex: 0 0 100%;
+    max-width: 100%;
+}
+
+/* Contenedores flexibles */
+.d-flex {
+    display: flex;
+    align-items: center;
+}
+
+/* Etiquetas */
+.form-label {
+    margin-bottom: 0; /* Reduce el margen inferior */
+    font-weight: bold; /* Texto en negrita */
+    font-size: 0.875rem; /* Tamaño de fuente más pequeño y legible */
+    color: #dc3545; /* Color rojo para las etiquetas */
+}
+
+/* Campos de formulario */
+.form-control,
+.form-select {
+    margin-left: 0.5rem; /* Espacio a la izquierda de los campos */
+    height: calc(1.5em + .5rem + 2px); /* Ajusta la altura del campo */
+    padding: .25rem .5rem; /* Padding ajustado */
+    font-size: 0.875rem; /* Tamaño de fuente reducido */
+    width: 100%; /* Asegura que los campos ocupen todo el ancho disponible */
+}
+
+.form-control[readonly] {
+    background-color: #f8d7da; /* Fondo rojo claro para campos de solo lectura */
+}
+
+/* Botones */
+.btn-primary {
+    background-color: #003366; /* Fondo azul oscuro para el botón primario */
+    color: #fff; /* Texto blanco */
+    padding: 0.5rem 1rem; /* Padding interno de los botones */
+    font-size: 1rem; /* Tamaño de fuente del botón */
+    border-radius: 0.25rem; /* Bordes redondeados del botón */
+    border: 1px solid transparent; /* Borde transparente */
+    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+    transition: background-color 0.3s, border-color 0.3s; /* Transiciones suaves */
+}
+
+.btn-primary:hover {
+    background-color: #002a5d; /* Fondo azul más oscuro en hover */
+}
+
+.btn-secondary {
+    background-color: #6c757d; /* Fondo gris para el botón secundario */
+    color: #fff; /* Texto blanco */
+    padding: 0.5rem 1rem; /* Padding interno de los botones */
+    font-size: 1rem; /* Tamaño de fuente del botón */
+    border-radius: 0.25rem; /* Bordes redondeados del botón */
+    border: 1px solid transparent; /* Borde transparente */
+    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+    transition: background-color 0.3s, border-color 0.3s; /* Transiciones suaves */
+}
+
+.btn-secondary:hover {
+    background-color: #5a6268; /* Fondo gris oscuro en hover */
+}

@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Autenticación</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
+    <style>
+        body {
+            padding-top: 80px;
+            background-color: #f0f4f8;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        .login-container {
+            max-width: 400px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .login-header {
+            background-color: #003366;
+            color: #fff;
+            padding: 20px;
+            border-radius: 10px 10px 0 0;
+            text-align: center;
+            font-weight: bold;
+            font-size: 1.4rem;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .login-form {
+            background-color: #fff;
+            border-radius: 0 0 10px 10px;
+            padding: 30px 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border: 1px solid #e0e0e0;
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        .form-group label {
+            font-weight: bold;
+            color: #333;
+        }
+        .form-control {
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+            height: 45px;
+            font-size: 1rem;
+        }
+        .btn-primary {
+            background-color: #b33f40;
+            border-color: #b33f40;
+            border-radius: 5px;
+            padding: 12px 20px;
+            font-size: 1rem;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+            width: 100%; /* Hacer el botón ancho completo */
+        }
+        .btn-primary:hover {
+            background-color: #9c3536;
+            border-color: #9c3536;
+        }
+        .footer {
+            margin-top: 20px;
+            text-align: center;
+            color: #555;
+        }
+        .footer a {
+            color: #003366;
+            text-decoration: none;
+        }
+        .footer a:hover {
+            text-decoration: underline;
+        }
+        .modal-body {
+            font-size: 1rem; /* Ajusta el tamaño del texto en el modal */
+        }
+    </style>
+</head>
+<body>
+    <div class="container login-container">
+        <div class="login-header">
+            <h1><span class="fa fa-sign-in"></span> Bienvenido a Persé Web</h1>
+        </div>
+        <div class="login-form">
+            <form action="/login" method="post">
+                <div class="form-group">
+                    <label for="email">Usuario</label>
+                    <input type="text" id="email" class="form-control" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Contraseña</label>
+                    <input type="password" id="password" class="form-control" name="password" required>
+                </div>
+                <button type="submit" class="btn btn-primary">Iniciar Sesión</button>
+            </form>
+            <hr>
+            <p class="footer">O ir a <a href="/">inicio</a>.</p>
+        </div>
+    </div>
+
+    <!-- Modal de error -->
+    <div class="modal fade" id="errorModal" tabindex="-1" aria-labelledby="errorModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="errorModalLabel">Error de Inicio de Sesión</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p id="errorMessage"><%= errorMessage || '' %></p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Script para mostrar el modal si hay un error -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var errorMessage = "<%= errorMessage || '' %>";
+            if (errorMessage) {
+                var errorModal = new bootstrap.Modal(document.getElementById('errorModal'));
+                
+                var errorMessageElement = document.getElementById('errorMessage');
+                if (errorMessageElement) {
+                    errorMessageElement.innerText = errorMessage; // O usa innerHTML si el mensaje contiene HTML
+                } else {
+                    console.error('El elemento con id "errorMessage" no existe.');
+                }
+                
+                console.log('Generando modal');
+                errorModal.show();
+            }            
+        });
+    </script>
+</body>
+</html>
